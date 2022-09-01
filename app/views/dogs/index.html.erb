@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <tbody>
+    <%= form_with model: @dog, url: dogs_path do |f| %>
+    <tr>
+      <th scope="row">1</th>
+      <td>
+        <%= link_to dog_path(@dog.id) do %>
+        <%= image_tag @dog.get_image %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to dog_path(@dog.id) do %>
+        <%= image_tag @dog.get_image %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to dog_path(@dog.id) do %>
+        <%= image_tag @dog.get_image %>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

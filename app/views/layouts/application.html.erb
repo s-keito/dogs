@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dogs</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="homes/top">Navbar</a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href= root_path >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href= new_dog_path >New</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href= dogs_path >Index</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    </header>
+    <main>
+    <%= yield %>
+    </main>
+
+<footer>
+  <div class="container-footer">
+   <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <span class="logo">LOGO</span>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="menu">
+                     <span>Menu</span>
+                     <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                         <a href="#">About</a>
+                      </li>
+                   </ul>
+            </div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
